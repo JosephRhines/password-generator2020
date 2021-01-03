@@ -10,9 +10,9 @@ function writePassword() {
 
 function generatePassword() {
   var passwordLength = generateLength()
-  var passwordChar = generateChar()
-  
-  return "Hello World"
+  // var passwordChar = generateChar()
+    console.log(passwordLength)
+  return passwordLength
 }
  function generateLength() {
   var myLength = prompt("How long do you want your password to be, between 8 and 128 characters?")
@@ -20,13 +20,43 @@ function generatePassword() {
      alert("Sorry, your password is invalid");
      return generateLength()
   } else {
-    return myLength
+    return generateChar(myLength)
   }
   
 }
- 
+// updated generateChar with confirms that captures the users info and if statements for the users selections.
 
- function generateChar() {
-  var chars = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*()_+?><:{}[]";
-  return chars
+ function generateChar(length) {
+  
+  var upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  var lowerCase = "abcdefghijklmnopqrstuvwxyz";
+  var number = "123456789";
+  var symbols = "!@#$*?"
+  var userChoice = "";
+  var password1 = "";
+  var userSelectUpper = confirm("Do you want uppercase characters");
+  var userSelectLower =confirm("Do you want lowercase characters");
+  var userSelectNumber = confirm("Do you want numbers");
+  var userSelectSymbol =confirm("Do you want symbols");
+  
+  if (userSelectUpper === true) {
+      userChoice += upperCase;
+  }
+  if (userSelectLower === true) {
+    userChoice += lowerCase
+  }
+  if (userSelectNumber === true) {
+    userChoice += number
+  }
+  if (userSelectSymbol === true) {
+    userChoice += symbols
+  }
+                  // I  added a for loop to make the password random
+  console.log(userChoice)
+  console.log(length)
+  for (i = 0; i < length; i++) {
+    password1 += userChoice[Math.floor(Math.random() * userChoice.length)]
+  }
+    console.log(password1)
+    return password1
  }
