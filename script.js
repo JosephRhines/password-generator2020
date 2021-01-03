@@ -13,10 +13,11 @@ function generatePassword() {
   // var passwordChar = generateChar()
     console.log(passwordLength)
   return passwordLength
-}
+} 
+// I added isNaN to the if statement so letters couldn't be used to bypass the password length section
  function generateLength() {
   var myLength = prompt("How long do you want your password to be, between 8 and 128 characters?")
-  if (myLength < 8 || myLength > 128) {
+  if (myLength < 8 || myLength > 128 || isNaN) {
      alert("Sorry, your password is invalid");
      return generateLength()
   } else {
