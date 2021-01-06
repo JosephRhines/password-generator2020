@@ -19,5 +19,8 @@ When the user presses the generate password button the application prompts the u
 Depending on what the user selects a password is generated with the correct criteria. If the user tries to use letters , symbols, or numbers
 not between 8 and 128, then the user gets an invalid message.
 
+https://github.com/JosephRhines/password-generator2020
+https://josephrhines.github.io/password-generator2020/
+
 
 
