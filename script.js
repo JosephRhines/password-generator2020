@@ -17,7 +17,7 @@ function generatePassword() {
 // I added isNaN to the if statement so letters couldn't be used to bypass the password length section
  function generateLength() {
   var myLength = prompt("How long do you want your password to be, between 8 and 128 characters?")
-  if (myLength < 8 || myLength > 128 || isNaN) {
+  if (myLength < 8 || myLength > 128 || isNaN(myLength)) {
      alert("Sorry, your password is invalid");
      return generateLength()
   } else {
@@ -32,7 +32,7 @@ function generatePassword() {
   var upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
   var lowerCase = "abcdefghijklmnopqrstuvwxyz";
   var number = "123456789";
-  var symbols = "!@#$*?"
+  var symbols = "!@#$*?";
   var userChoice = "";
   var password1 = "";
   var userSelectUpper = confirm("Do you want uppercase characters");
@@ -41,7 +41,7 @@ function generatePassword() {
   var userSelectSymbol =confirm("Do you want symbols");
   
   if (userSelectUpper === true) {
-      userChoice += upperCase;
+      userChoice += upperCase
   }
   if (userSelectLower === true) {
     userChoice += lowerCase
