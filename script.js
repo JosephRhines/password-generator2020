@@ -11,7 +11,7 @@ function writePassword() {
 function generatePassword() {
   var passwordLength = generateLength()
   // var passwordChar = generateChar()
-    console.log(passwordLength)
+   
   return passwordLength
 } 
 // I added isNaN to the if statement so letters couldn't be used to bypass the password length section
