@@ -53,11 +53,10 @@ function generatePassword() {
     userChoice += symbols
   }
                   // I  added a for loop to make the password random
-  console.log(userChoice)
-  console.log(length)
+  
   for (i = 0; i < length; i++) {
     password1 += userChoice[Math.floor(Math.random() * userChoice.length)]
   }
-    console.log(password1)
+    
     return password1
  }
